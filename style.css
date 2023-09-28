@@ -6,3 +6,67 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: lightcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-box {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  background: url(images/ph1.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: width 0.5s;
+}
+
+.img-box:nth-child(2) {
+  background: url(images/ph2.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box:nth-child(3) {
+  background: url(images/ph4.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box:nth-child(4) {
+  background: url(images/ph5.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box h3 {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.img-box:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+.img-box:hover h3 {
+  opacity: 1;
+  bottom: 25px;
+}
